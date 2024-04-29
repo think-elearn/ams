@@ -88,7 +88,8 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "pdc_ams.apps.users",
-    # Your stuff: custom apps go here
+    "pdc_ams.apps.items",
+    "pdc_ams.apps.blueprint",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
