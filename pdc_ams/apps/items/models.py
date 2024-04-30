@@ -5,6 +5,8 @@ from django.utils.translation import gettext_lazy as _
 from pdc_ams.apps.blueprint.models import LearningObjective
 from pdc_ams.apps.core.models import BaseModel
 
+from .validators import validate_p_value
+
 
 class Question(BaseModel):
     class Type(models.TextChoices):
@@ -53,6 +55,16 @@ class Item(BaseModel):
     enemy_items = models.ManyToManyField("self", blank=True)
     learning_objective = models.ForeignKey(LearningObjective, on_delete=models.PROTECT)
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+    estimated_p_value = models.FloatField(
+        default=0.85,
+        validators=[validate_p_value],
+        help_text="Enter a value between 0 and 1",
+    )
+    p_value = models.FloatField(
+        blank=True,
+        null=True,
+        validators=[validate_p_value],
+    )
 
     def __str__(self):
         return self.stem.text[:42]
