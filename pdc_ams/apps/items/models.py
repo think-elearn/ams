@@ -65,6 +65,7 @@ class Item(BaseModel):
         null=True,
         validators=[validate_p_value],
     )
+    legacy_id = models.PositiveSmallIntegerField(blank=True, null=True)
 
     def __str__(self):
         return self.stem.text[:42]
