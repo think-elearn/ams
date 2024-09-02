@@ -1,19 +1,20 @@
-from django.test import TestCase
+import pytest
 from django.core.exceptions import ValidationError
+
 from pdc_ams.apps.items.validators import validate_p_value
 
 
-class TestPValueValidator(TestCase):
+class TestPValueValidator:
     def test_valid_p_value(self):
         # Test that valid p values pass
         for p in [0, 0.5, 1]:
             try:
                 validate_p_value(p)
             except ValidationError:
-                self.fail(f"{p} failed validation when it should have passed")
+                pytest.fail(f"{p} failed validation when it should have passed")
 
     def test_invalid_p_value(self):
         # Test that invalid p values fail
         for p in [-1, 1.5, 2]:
-            with self.assertRaises(ValidationError):
+            with pytest.raises(ValidationError):
                 validate_p_value(p)
