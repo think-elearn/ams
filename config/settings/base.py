@@ -270,6 +270,15 @@ LOGGING = {
 if USE_TZ:
     # https://docs.celeryq.dev/en/stable/userguide/configuration.html#std:setting-timezone
     CELERY_TIMEZONE = TIME_ZONE
+
+# Get Redis URL from environment variable to connect Celery to Redis
+if "REDIS_TLS_URL" in env:
+    REDIS_URL = env("REDIS_TLS_URL")
+elif "REDIS_URL" in env:
+    REDIS_URL = env("REDIS_URL")
+else:
+    REDIS_URL = "rediss://localhost:6379/0"
+
 # https://docs.celeryq.dev/en/stable/userguide/configuration.html#std:setting-broker_url
 CELERY_BROKER_URL = env("CELERY_BROKER_URL")
 # https://docs.celeryq.dev/en/stable/userguide/configuration.html#std:setting-result_backend
