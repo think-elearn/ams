@@ -4,14 +4,14 @@ How To - Project Documentation
 Get Started
 ----------------------------------------------------------------------
 
-Documentation can be written as rst files in `pdc_ams/docs`.
+Documentation can be written as rst files in `ams/docs`.
 
 
 To build and serve docs, use the command::
 
     make livehtml
 
-from inside the `pdc_ams/docs` directory.
+from inside the `ams/docs` directory.
 
 
 Changes to files in `docs/_source` will be picked up and reloaded automatically.

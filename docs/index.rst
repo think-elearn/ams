@@ -1,9 +1,9 @@
-.. PDC AMS documentation master file, created by
+.. AMS documentation master file, created by
    sphinx-quickstart.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to PDC AMS's documentation!
+Welcome to AMS's documentation!
 ======================================================================
 
 .. toctree::

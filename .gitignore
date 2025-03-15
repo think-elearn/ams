@@ -273,7 +273,7 @@ dump.rdb
 
 ### Project template
 mailpit
-pdc_ams/media/
+ams/media/
 
 .pytest_cache/
 .env

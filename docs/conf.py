@@ -28,7 +28,7 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 
-project = "PDC AMS"
+project = "AMS"
 copyright = """2024, Felipe Villegas"""
 author = "Felipe Villegas"
 

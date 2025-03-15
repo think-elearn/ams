@@ -1,6 +1,6 @@
-# Translations for the PDC AMS project
+# Translations for the AMS project
 # Copyright (C) 2024 Felipe Villegas
-# Felipe Villegas <admin@professionaldesignations.com>, 2024.
+# Felipe Villegas <admin@thinkelearn.com>, 2024.
 #
 #, fuzzy
 msgid ""

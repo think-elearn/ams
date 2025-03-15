@@ -2,6 +2,6 @@
 # ------------------------------------------------------------------------------
 POSTGRES_HOST=postgres
 POSTGRES_PORT=5432
-POSTGRES_DB=pdc_ams
+POSTGRES_DB=ams
 POSTGRES_USER=pQxnlmWImMmpaeWLLWBEyzufKmrncJUr
 POSTGRES_PASSWORD=Gm9C3wSaRSjX7PB6yNYXzALSEdlSZhOWh4DGTnmEWzZVegSEBitKmu5ptZRp89m0
